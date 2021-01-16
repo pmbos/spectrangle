@@ -1,0 +1,20 @@
+This is the server package.
+Responsibilities of the server:
+1) Allow incoming connections.
+2) Delegate incoming connections to separate threads so as to always be able to accept a new one.
+3) Queue a client for a game.
+4) Add a client to a game.
+5) Check when a game can start.
+6) When the game has not yet started, check if all clients are still connected. x
+7) When a game can start, play the game.
+8) After having played a game, end the game thread.
+9) If a client disconnects during the game, check if we still have enough players to continue.
+10) If true (on point 9)), then remove that player from the game, close their socket and continue.
+11) If not (on point 9)), then send a game over to all players and terminate the game.
+12) If, during the waiting process, the amount of players drops to 0, terminate the game thread.
+13) Always accept user input, especially the exit command.
+14) Check for user input on a time out (this part of the implementation is not fully ours as this was
+		well beyond the scope of the module, but we wanted to implement it anyway so we decided to
+		look up how it is done and fit it to our needs)
+15) When player preference is not important, wait for 30 seconds after the minimum requirements for
+	a game start are met so that other players may join as well.

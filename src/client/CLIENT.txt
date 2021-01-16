@@ -1,0 +1,8 @@
+This is the client package.
+The client's responsibilities are
+1) To connect to a server.
+2) To respect the client-server protocol.
+3) To allow the player to choose their game configuration (name, preference, ip, port, type)
+4) To show the user what tiles they can place during their move.
+5) To send the user's choices to the server.
+6) To respond to the server's messages appropriately.

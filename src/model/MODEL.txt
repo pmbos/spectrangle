@@ -1,0 +1,3 @@
+This is the model packages.
+The model's responsibilities are:
+1) To model and supply all the functionality required to play a game of spectrangle.
